@@ -1,5 +1,6 @@
 package shapelesscirce
 
+import cats.syntax.either._
 import io.circe._
 import shapeless._
 import shapeless.labelled._

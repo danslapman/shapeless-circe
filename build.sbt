@@ -2,7 +2,7 @@ name := "shapeless-circe"
 
 organization := "danslapman"
 
-version := "0.1"
+version := "1.0"
 
 scalaVersion := "2.12.4"
 
@@ -10,7 +10,7 @@ crossScalaVersions := Seq("2.11.12", "2.12.4")
 
 scalacOptions ++= {
   CrossVersion.partialVersion(scalaVersion.value) match {
-    case Some((2, y)) if y == 11 => Seq("-Xexperimental")
+    case Some((2, y)) if y == 11 => Seq("-Xexperimental", "-Yrecursion", "1")
     case _ => Seq.empty[String]
   }
 }
